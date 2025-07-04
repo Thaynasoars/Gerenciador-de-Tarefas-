@@ -1,5 +1,7 @@
-from app import create_app
+from bottle import run
+import controllers.user_controller
+import controllers.task_controller
+import controllers.category_controller
+import controllers.home_controller
 
-if __name__ == '__main__':
-    app = create_app()
-    app.run()
+run(host='localhost', port=8080, debug=True, reloader=True)

@@ -1,42 +1,30 @@
-from bottle import request
-from models.user import UserModel, User
+import json
+import os
+from models.user import User
 
-class UserService:
-    def __init__(self):
-        self.user_model = UserModel()
+USERS_FILE = 'data/users.json'
 
+def load_users():
+    if not os.path.exists(USERS_FILE):
+        return []
+    with open(USERS_FILE, 'r', encoding='utf-8') as f:
+        return [User.from_dict(u) for u in json.load(f)]
 
-    def get_all(self):
-        users = self.user_model.get_all()
-        return users
+def save_users(users):
+    with open(USERS_FILE, 'w', encoding='utf-8') as f:
+        json.dump([u.to_dict() for u in users], f, indent=4, ensure_ascii=False)
 
+def get_all():
+    return load_users()
 
-    def save(self):
-        last_id = max([u.id for u in self.user_model.get_all()], default=0)
-        new_id = last_id + 1
-        name = request.forms.get('name')
-        email = request.forms.get('email')
-        birthdate = request.forms.get('birthdate')
+def add_user(user):
+    users = load_users()
+    users.append(user)
+    save_users(users)
 
-        user = User(id=new_id, name=name, email=email, birthdate=birthdate)
-        self.user_model.add_user(user)
-
-
-    def get_by_id(self, user_id):
-        return self.user_model.get_by_id(user_id)
-
-
-    def edit_user(self, user):
-        name = request.forms.get('name')
-        email = request.forms.get('email')
-        birthdate = request.forms.get('birthdate')
-
-        user.name = name
-        user.email = email
-        user.birthdate = birthdate
-
-        self.user_model.update_user(user)
-
-
-    def delete_user(self, user_id):
-        self.user_model.delete_user(user_id)
+def find_by_email(email):
+    users = load_users()
+    for u in users:
+        if u.email == email:
+            return u
+    return None
