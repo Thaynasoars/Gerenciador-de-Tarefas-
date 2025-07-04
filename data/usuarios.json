@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Thayná Almeida",
+        "nome": "thayna",
         "email": "evelyntha6@gmail.com",
         "senha": "12345678"
     },
     {
         "id": 2,
-        "name": "Evellyn",
-        "email": "evellyn000@gmail.com",
+        "nome": "thayna",
+        "email": "thayna@gmail.com",
         "senha": "12345678"
     },
     {
         "id": 3,
-        "name": "Evelyn Thayna de Almeida Soares",
-        "email": "241025757@aluno.unb.br",
+        "nome": "test",
+        "email": "test@test.com",
         "senha": "12345678"
     },
     {
         "id": 4,
-        "name": "Julia",
-        "email": "Julia@gmail.com",
+        "nome": "testando ",
+        "email": "testando@test.com",
         "senha": "12345678"
     }
 ]

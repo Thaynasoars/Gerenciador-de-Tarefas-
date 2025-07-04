@@ -23,9 +23,10 @@ def adicionar_usuario(usuario):
     salvar_usuarios(usuarios)
 
 def find_by_email(email):
+    email = email.strip().lower()
     usuarios = carregar_usuarios()
     for u in usuarios:
-        if u.email == email:
+        if u.email.strip().lower() == email:
             return u
     return None
 
