@@ -16,5 +16,11 @@
         "name": "Evelyn Thayna de Almeida Soares",
         "email": "241025757@aluno.unb.br",
         "senha": "12345678"
+    },
+    {
+        "id": 4,
+        "name": "Julia",
+        "email": "Julia@gmail.com",
+        "senha": "12345678"
     }
 ]
