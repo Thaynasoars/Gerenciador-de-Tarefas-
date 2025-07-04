@@ -39,26 +39,13 @@ def login_form():
 def login():
     email = request.forms.get('email')
     senha = request.forms.get('senha')
-
-    # Depuração: mostrar os dados recebidos
-    print("🔍 Email recebido:", repr(email))
-    print("🔍 Senha recebida:", repr(senha))
-
     usuario = usuario_service.find_by_email(email)
-
-    if usuario:
-        print("✅ Usuário encontrado:", usuario.email)
-        print("🔐 Senha cadastrada:", usuario.senha)
-    else:
-        print("❌ Nenhum usuário encontrado com o email fornecido.")
-
     if usuario and usuario.senha == senha:
         response.set_cookie("usuario", email)
         return redirect('/usuarios')
-
     return "Login inválido!<br><a href='/login'>Tentar novamente</a>"
 
-# (Opcional) Redirecionamento alternativo
+# Rota para redirecionar /register para /registrar
 @route('/register')
 def redirect_register():
     return redirect('/registrar')
