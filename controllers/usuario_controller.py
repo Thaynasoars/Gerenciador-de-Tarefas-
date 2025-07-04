@@ -44,3 +44,8 @@ def login():
         response.set_cookie("usuario", email)
         return redirect('/usuarios')
     return "Login inválido!<br><a href='/login'>Tentar novamente</a>"
+
+# Adicione esta rota no final do arquivo:
+@route('/register')
+def redirect_register():
+    return redirect('/registrar')
