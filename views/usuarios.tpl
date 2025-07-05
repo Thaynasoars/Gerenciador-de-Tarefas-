@@ -8,7 +8,7 @@
     <h1>Lista de Usuários</h1>
     <ul>
         % for usuario in usuarios:
-            <li>{{usuario.name}} ({{usuario.email}})</li>
+        <li>{{usuario.nome}} ({{usuario.email}})</li>
         % end
     </ul>
     <a href="/">Voltar ao início</a>
