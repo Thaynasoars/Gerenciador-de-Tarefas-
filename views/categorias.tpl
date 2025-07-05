@@ -6,10 +6,10 @@
 </head>
 <body>
     <h1>Lista de Categorias</h1>
-    <a href="/categorias/novo">Nova Categoria</a>
+    <a href="/categorias/nova">Nova Categoria</a>
     <ul>
         % for categoria in categorias:
-            <li>{{categoria.name}}</li>
+            <li>{{categoria.nome}}</li>
         % end
     </ul>
     <a href="/">Voltar ao início</a>
