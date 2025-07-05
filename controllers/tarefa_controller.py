@@ -8,7 +8,15 @@ from models.tarefa import Tarefa
 def listar_tarefas():
     tarefas = tarefa_service.get_all()
     categorias = categoria_service.get_all()
-    return dict(tarefas=tarefas, categorias=categorias)
+
+    # Cria um dicionário para lookup rápido de categorias por ID
+    categoria_por_id = {str(cat.id): cat for cat in categorias}
+
+    # Adiciona o atributo .categoria em cada tarefa
+    for tarefa in tarefas:
+        tarefa.categoria = categoria_por_id.get(str(tarefa.category_id), None)
+
+    return dict(tarefas=tarefas)
 
 @route('/tarefas/nova')
 @view('tarefa_form')

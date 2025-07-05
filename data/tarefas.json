@@ -38,5 +38,13 @@
         "category_id": "4",
         "user_id": "1",
         "status": "pendente"
+    },
+    {
+        "id": 6,
+        "title": "Teste categoria 5",
+        "description": "categoria 5",
+        "category_id": "5",
+        "user_id": "1",
+        "status": "pendente"
     }
 ]

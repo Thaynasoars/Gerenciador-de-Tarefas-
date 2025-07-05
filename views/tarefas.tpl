@@ -6,7 +6,14 @@
   <ul class="lista-tarefas">
   % if tarefas:
     % for tarefa in tarefas:
-      <li><strong>{{tarefa.title}}</strong> – {{tarefa.description}}</li>
+      <li>
+        <strong>{{tarefa.title}}</strong> – {{tarefa.description}}
+        % if tarefa.categoria:
+          <br><small>Categoria: {{tarefa.categoria.nome}}</small>
+        % else:
+          <br><small>Categoria: Nenhuma</small>
+        % end
+      </li>
     % end
   % else:
     <li>Nenhuma tarefa cadastrada.</li>
@@ -14,6 +21,5 @@
   </ul>
 
   <a href="/tarefas/nova" class="botao-link">+ Nova Tarefa</a>
-  <a href="/" class="link-voltar">Voltar ao ínicio</a>
-
+  <a href="/" class="link-voltar">Voltar ao início</a>
 </div>
