@@ -76,7 +76,7 @@
     <div class="card">
         <h1>Nova Categoria</h1>
 
-        <form action="/categorias/nova" method="post">
+        <form action="/categorias" method="post">
             <label for="nome">Nome da Categoria:</label>
             <input type="text" id="nome" name="nome" required />
 
