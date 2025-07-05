@@ -1,8 +1,13 @@
 % rebase('layout.tpl')
-<h2>Tarefas</h2>
+
+<h2>Lista de Tarefas</h2>
+
 <ul>
-% for task in tasks:
-    <li>{{task['title']}} ({{task['status']}})</li>
+% for tarefa in tarefas:
+  <li>{{tarefa.title}} - {{tarefa.description}}</li>
+% else:
+  <li>Nenhuma tarefa cadastrada.</li>
 % end
 </ul>
-<a href="/tasks/new">Nova Tarefa</a>
+
+<a href="/tarefas/nova">+ Nova Tarefa</a>

@@ -22,5 +22,17 @@
         "nome": "testando ",
         "email": "testando@test.com",
         "senha": "12345678"
+    },
+    {
+        "id": 5,
+        "nome": "predo1",
+        "email": "predo@gmail.com",
+        "senha": "predo"
+    },
+    {
+        "id": 6,
+        "nome": "teste",
+        "email": "teste@gmail.com",
+        "senha": "teste"
     }
 ]

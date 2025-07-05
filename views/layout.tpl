@@ -8,8 +8,8 @@
     <header>
         <h1>Gerenciador de Tarefas</h1>
         <nav>
-            <a href="/tasks">Tarefas</a> |
-            <a href="/categories">Categorias</a> |
+            <a href="/tarefas">Tarefas</a> |
+            <a href="/categorias">Categorias</a> |
             <a href="/register">Registrar</a> |
             <a href="/login">Login</a>
         </nav>
