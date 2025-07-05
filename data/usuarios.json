@@ -46,5 +46,11 @@
         "nome": "teste",
         "email": "teste1@gmail.com",
         "senha": "teste"
+    },
+    {
+        "id": 9,
+        "nome": "pedro",
+        "email": "pedro@gmail.com",
+        "senha": "pedro"
     }
 ]

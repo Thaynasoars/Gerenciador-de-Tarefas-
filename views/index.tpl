@@ -1,24 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Bem-vindo ao Gerenciador de Tarefas!</h1>
+% rebase('layout.tpl')
 
-    <nav>
-        <ul>
-        % if not logado:
-            <li><a href="/login">Login</a></li>
-            <li><a href="/registrar">Registrar</a></li>
-        % else:
-            <li><a href="/usuarios">Usuários</a></li>
-            <li><a href="/tarefas">Tarefas</a></li>
-            <li><a href="/categorias">Categorias</a></li>
-            <li><a href="/logout">Logout</a></li> <!-- você pode criar rota para logout -->
-        % end
-        </ul>
-    </nav>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  h1.titulo {
+    color: #222;
+    font-size: 2.8rem;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .menu-lateral {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .menu-lateral a {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-lateral a:hover {
+    background-color: #28a745;
+    color: white;
+  }
+
+  @media (max-width: 480px) {
+    h1.titulo {
+      font-size: 2rem;
+    }
+    .menu-lateral a {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<body>
+  <h1 class="titulo">Bem-vindo ao Gerenciador de Tarefas!</h1>
+
+  <nav class="menu-lateral">
+    % if not logado:
+      <a href="/login">Login</a>
+      <a href="/registrar">Registrar</a>
+    % else:
+      <a href="/usuarios">Usuários</a>
+      <a href="/tarefas">Tarefas</a>
+      <a href="/categorias">Categorias</a>
+      <a href="/logout">Logout</a>
+    % end
+  </nav>
 </body>
-</html>

@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Usuários</title>
-</head>
-<body>
-    <h1>Lista de Usuários</h1>
-    <ul>
-        % for usuario in usuarios:
-        <li>{{usuario.nome}} ({{usuario.email}})</li>
-        % end
-    </ul>
-    <a href="/">Voltar ao início</a>
-</body>
-</html>
+% rebase('layout.tpl')
+
+<div class="tarefas-container">
+  <h2 class="titulo">Lista de Usuários</h2>
+
+  <ul class="lista-tarefas">
+    % if usuarios:
+      % for usuario in usuarios:
+        <li><strong>{{usuario.nome}}</strong> ({{usuario.email}})</li>
+      % end
+    % else:
+      <li>Nenhum usuário cadastrado.</li>
+    % end
+  </ul>
+
+  <a href="/usuarios/novo" class="botao-link">+ Novo Usuário</a>
+  <a href="/" class="link-voltar">Voltar ao início</a>
+</div>

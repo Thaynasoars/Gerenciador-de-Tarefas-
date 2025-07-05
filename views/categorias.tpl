@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Categorias</title>
-</head>
-<body>
-    <h1>Lista de Categorias</h1>
-    <a href="/categorias/nova">Nova Categoria</a>
-    <ul>
-        % for categoria in categorias:
-            <li>{{categoria.nome}}</li>
-        % end
-    </ul>
-    <a href="/">Voltar ao início</a>
-</body>
-</html>
+% rebase('layout.tpl')
+
+<div class="tarefas-container">
+  <h2 class="titulo">Lista de Categorias</h2>
+
+  <ul class="lista-tarefas">
+    % if categorias:
+      % for categoria in categorias:
+        <li>{{categoria.nome}}</li>
+      % end
+    % else:
+      <li>Nenhuma categoria cadastrada.</li>
+    % end
+  </ul>
+
+  <a href="/categorias/nova" class="botao-link">+ Nova Categoria</a>
+  <a href="/" class="link-voltar">Voltar ao início</a>
+</div>

@@ -1,10 +1,18 @@
 [
     {
-        "id": "categoria 1",
+        "id": 1,
         "nome": "categoria 1"
     },
     {
-        "id": "categoria 2",
+        "id": 2,
         "nome": "categoria 2"
+    },
+    {
+        "id": 3,
+        "nome": "categoria 3"
+    },
+    {
+        "id": 4,
+        "nome": "categorai 4"
     }
 ]

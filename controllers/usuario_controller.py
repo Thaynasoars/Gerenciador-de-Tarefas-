@@ -5,7 +5,8 @@ from models.usuario import Usuario
 @route('/')
 @view('index')
 def home():
-    return {}
+    usuario_logado = request.get_cookie("usuario")
+    return dict(logado=bool(usuario_logado))
 
 @route('/usuarios')
 def listar_usuarios():

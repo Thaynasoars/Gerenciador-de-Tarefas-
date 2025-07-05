@@ -1,13 +1,19 @@
 % rebase('layout.tpl')
 
-<h2>Lista de Tarefas</h2>
+<div class="tarefas-container">
+  <h2 class="titulo">Lista de Tarefas</h2>
 
-<ul>
-% for tarefa in tarefas:
-  <li>{{tarefa.title}} - {{tarefa.description}}</li>
-% else:
-  <li>Nenhuma tarefa cadastrada.</li>
-% end
-</ul>
+  <ul class="lista-tarefas">
+  % if tarefas:
+    % for tarefa in tarefas:
+      <li><strong>{{tarefa.title}}</strong> – {{tarefa.description}}</li>
+    % end
+  % else:
+    <li>Nenhuma tarefa cadastrada.</li>
+  % end
+  </ul>
 
-<a href="/tarefas/nova">+ Nova Tarefa</a>
+  <a href="/tarefas/nova" class="botao-link">+ Nova Tarefa</a>
+  <a href="/" class="link-voltar">Voltar ao ínicio</a>
+
+</div>

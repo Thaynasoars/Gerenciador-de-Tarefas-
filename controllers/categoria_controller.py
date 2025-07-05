@@ -24,6 +24,6 @@ def criar_categoria():
     else:
         novo_id = 1
 
-    categoria = Categoria(id=novo_id, name=nome)
+    categoria = Categoria(id=novo_id, nome=nome)
     categoria_service.adicionar_categoria(categoria)
     return redirect('/categorias')
