@@ -16,53 +16,5 @@
         "nome": "test",
         "email": "test@test.com",
         "senha": "12345678"
-    },
-    {
-        "id": 4,
-        "nome": "testando ",
-        "email": "testando@test.com",
-        "senha": "12345678"
-    },
-    {
-        "id": 5,
-        "nome": "predo1",
-        "email": "predo@gmail.com",
-        "senha": "predo"
-    },
-    {
-        "id": 6,
-        "nome": "teste",
-        "email": "teste@gmail.com",
-        "senha": "teste"
-    },
-    {
-        "id": 7,
-        "nome": "pedro1",
-        "email": "pedro1@gmail.com",
-        "senha": "pedro"
-    },
-    {
-        "id": 8,
-        "nome": "teste",
-        "email": "teste1@gmail.com",
-        "senha": "teste"
-    },
-    {
-        "id": 9,
-        "nome": "pedro",
-        "email": "pedro@gmail.com",
-        "senha": "pedro"
-    },
-    {
-        "id": 10,
-        "nome": "pedro2@gmail.com",
-        "email": "pedro2@gmail.com",
-        "senha": "pedro2"
-    },
-    {
-        "id": 11,
-        "nome": "pedro3",
-        "email": "pedro3@gmail.com",
-        "senha": "pedro3"
     }
 ]
