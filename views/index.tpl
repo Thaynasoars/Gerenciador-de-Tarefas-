@@ -13,21 +13,26 @@
     box-sizing: border-box;
   }
 
-  h1.titulo {
-    color: #222;
-    font-size: 2.8rem;
-    margin: 0 0 30px 0;
-    text-align: center;
-  }
+    h1.titulo {
+        color: #222;
+        font-size: 2.8rem;
+        margin: 0 0 50px 0; /* maior espaçamento para o menu */
+        text-align: center;
+        width: 100%;
+        max-width: 600px; /* opcional, limita largura do título */
+    }
 
-  .menu-lateral {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-  }
+    .menu-lateral {
+        display: flex;
+        gap: 20px;
+        flex-wrap: nowrap;       /* força tudo em uma linha só */
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow-x: auto;        /* permite scroll horizontal se não couber */
+        -webkit-overflow-scrolling: touch; /* suaviza scroll no mobile */
+    }
 
   .menu-lateral a {
     text-decoration: none;
