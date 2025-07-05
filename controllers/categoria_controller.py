@@ -16,6 +16,14 @@ def nova_categoria():
 @route('/categorias', method='POST')
 def criar_categoria():
     nome = request.forms.get('nome')
-    categoria = Categoria(id=nome.lower(), nome=nome)
+
+    categorias = categoria_service.get_all()
+    if categorias:
+        ultimo_id = max(int(c.id) for c in categorias)
+        novo_id = ultimo_id + 1
+    else:
+        novo_id = 1
+
+    categoria = Categoria(id=novo_id, name=nome)
     categoria_service.adicionar_categoria(categoria)
     return redirect('/categorias')

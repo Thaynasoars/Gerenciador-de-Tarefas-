@@ -1,5 +1,8 @@
-from bottle import route, template
+from bottle import route, view, request
 
 @route('/')
+@view('index')
 def home():
-    return template('index')
+    usuario_logado = request.get_cookie("usuario")
+    logado = usuario_logado is not None
+    return dict(logado=logado)

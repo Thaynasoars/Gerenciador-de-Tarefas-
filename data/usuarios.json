@@ -34,5 +34,17 @@
         "nome": "teste",
         "email": "teste@gmail.com",
         "senha": "teste"
+    },
+    {
+        "id": 7,
+        "nome": "pedro1",
+        "email": "pedro1@gmail.com",
+        "senha": "pedro"
+    },
+    {
+        "id": 8,
+        "nome": "teste",
+        "email": "teste1@gmail.com",
+        "senha": "teste"
     }
 ]

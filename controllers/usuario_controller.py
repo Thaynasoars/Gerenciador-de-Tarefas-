@@ -49,3 +49,8 @@ def login():
 @route('/register')
 def redirect_register():
     return redirect('/registrar')
+
+@route('/logout')
+def logout():
+    response.delete_cookie("usuario")
+    return redirect('/')
