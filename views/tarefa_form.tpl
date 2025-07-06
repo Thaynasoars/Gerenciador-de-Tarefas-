@@ -35,6 +35,10 @@
         }
 
         input[type="text"],
+<<<<<<< HEAD
+=======
+        input[type="date"],
+>>>>>>> b188d04 (Commit inicial do projeto Gerenciador de Tarefas)
         select {
             width: 100%;
             padding: 8px;
@@ -91,6 +95,12 @@
                 % end
             </select>
 
+<<<<<<< HEAD
+=======
+            <label for="prazo">Prazo (opcional):</label>
+            <input type="date" name="prazo" id="prazo">
+
+>>>>>>> b188d04 (Commit inicial do projeto Gerenciador de Tarefas)
             <input type="submit" value="Criar">
         </form>
         <a href="/tarefas" class="link-voltar">Voltar à listagem de tarefas</a>
