@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 from datetime import datetime
 
->>>>>>> b188d04 (Commit inicial do projeto Gerenciador de Tarefas)
 class Tarefa:
     def __init__(self, id, title, description, category_id, user_id, status="pendente"):
         self.id = id
@@ -10,9 +7,6 @@ class Tarefa:
         self.description = description
         self.category_id = category_id
         self.user_id = user_id
-<<<<<<< HEAD
-        self.status = status
-=======
         self.status = status
 
     def tipo(self):
@@ -39,4 +33,3 @@ class TarefaComPrazo(Tarefa):
             return f"{self.status} (vence em {self.prazo})"
         except ValueError:
             return f"{self.status} (prazo inválido)"
->>>>>>> b188d04 (Commit inicial do projeto Gerenciador de Tarefas)

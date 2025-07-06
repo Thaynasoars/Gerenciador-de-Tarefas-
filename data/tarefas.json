@@ -1,6 +1,4 @@
 [
-<<<<<<< HEAD
-=======
     {
         "id": 1,
         "title": "emprego",
@@ -10,5 +8,4 @@
         "status": "pendente",
         "prazo": "2025-07-12"
     }
->>>>>>> b188d04 (Commit inicial do projeto Gerenciador de Tarefas)
 ]
