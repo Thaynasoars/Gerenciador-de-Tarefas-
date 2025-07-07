@@ -26,7 +26,6 @@ class TarefaComPrazo(Tarefa):
 
     def status_detalhado(self):
         try:
-            print(f"DEBUG - Prazo recebido: '{self.prazo}'")
             prazo_data = datetime.strptime(self.prazo, "%Y-%m-%d").date()
             hoje = datetime.today().date()
             if hoje > prazo_data:
