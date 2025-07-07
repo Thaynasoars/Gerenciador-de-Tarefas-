@@ -7,5 +7,23 @@
         "user_id": "1",
         "status": "pendente",
         "prazo": "2025-07-12"
+    },
+    {
+        "id": 2,
+        "title": "tarefa",
+        "description": "tarefa2",
+        "category_id": "2",
+        "user_id": "1",
+        "status": "pendente",
+        "prazo": "2025-07-06"
+    },
+    {
+        "id": 3,
+        "title": "tarefa",
+        "description": "tarefa de teste",
+        "category_id": "1",
+        "user_id": "1",
+        "status": "pendente",
+        "prazo": "2025-07-07"
     }
 ]
