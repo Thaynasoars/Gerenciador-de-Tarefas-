@@ -56,3 +56,7 @@ def criar_tarefa():
     tarefa_service.add_tarefa(nova_tarefa)
     return redirect('/tarefas')
 
+@route('/tarefas/<id:int>/excluir', method='POST')
+def excluir_tarefa(id):
+    tarefa_service.remover_tarefa(id)
+    return redirect('/tarefas')

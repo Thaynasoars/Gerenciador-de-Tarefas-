@@ -14,10 +14,14 @@
         <small><strong>Status:</strong> {{tarefa.status_detalhado()}}</small><br>
 
         % if tarefa.categoria:
-          <small><strong>Categoria:</strong> {{tarefa.categoria.nome}}</small>
+          <small><strong>Categoria:</strong> {{tarefa.categoria.nome}}</small><br>
         % else:
-          <small><strong>Categoria:</strong> Nenhuma</small>
+          <small><strong>Categoria:</strong> Nenhuma</small><br>
         % end
+
+        <form action="/tarefas/{{tarefa.id}}/excluir" method="post" style="display:inline;">
+          <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')">Excluir</button>
+        </form>
       </li>
     % end
   % else:

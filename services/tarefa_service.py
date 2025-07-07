@@ -24,10 +24,10 @@ class TarefaService:
         with open(DATA_PATH, "w", encoding="utf-8") as f:
             json.dump([t.__dict__ for t in tarefas], f, indent=4, ensure_ascii=False)
 
-tarefa_service = TarefaService()
+    def remover_tarefa(self, tarefa_id: int):
+        tarefas = self.get_all()
+        tarefas = [t for t in tarefas if t.id != tarefa_id]
+        with open(DATA_PATH, "w", encoding="utf-8") as f:
+            json.dump([t.__dict__ for t in tarefas], f, indent=4, ensure_ascii=False)
 
-def delete_tarefa(self, tarefa_id):
-    tarefas = self.get_all()
-    tarefas = [t for t in tarefas if t.id != tarefa_id]
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
-        json.dump([t.__dict__ for t in tarefas], f, indent=4, ensure_ascii=False)
+tarefa_service = TarefaService()
