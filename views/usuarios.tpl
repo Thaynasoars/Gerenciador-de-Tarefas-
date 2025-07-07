@@ -13,6 +13,5 @@
     % end
   </ul>
 
-  <a href="/usuarios/novo" class="botao-link">+ Novo Usuário</a>
   <a href="/" class="link-voltar">Voltar ao início</a>
 </div>
