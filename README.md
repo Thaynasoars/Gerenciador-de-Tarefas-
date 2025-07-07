@@ -103,3 +103,79 @@ Para adicionar novos modelos (ex: Atividades):
 ## 🧠 Autor e Licença
 Projeto desenvolvido como template didático para disciplinas de Programação Orientada a Objetos, baseado no [BMVC](https://github.com/hgmachine/bmvc_start_from_this).
 Você pode reutilizar, modificar e compartilhar livremente.
+
+
+#  Gerenciador de Tarefas - Bottle MVC
+
+![Interface Inicial](static/img/tela_inicial.png)
+
+---
+
+## Sistema de Autenticação
+
+### Fluxo de Login/Logout
+
+1. *Login* (/login):
+   - Valida credenciais contra usuários cadastrados
+   - Cria sessão segura com cookie HTTP-only
+   - Redireciona para dashboard
+
+2. *Área Logada*:
+   - Menu mostra "Logout" quando autenticado
+   - Todas as rotas protegidas verificam sessão
+
+3. *Logout* (/logout):
+   - Encerra a sessão
+   - Remove cookies
+   - Redireciona para página inicial
+
+### 👤 Usuário de Teste
+
+Email: test@test.com
+Senha: 12345678
+---
+
+##  Tecnologias Utilizadas
+
+-  *Python 3* + *Bottle Framework*
+-  Persistência em arquivos *JSON*
+-  Estilo com *CSS* e *JavaScript Vanilla*
+-  Senhas com *hash SHA-256*
+
+---
+
+##  Estrutura MVC
+
+| Componente   | Pasta         | Exemplos                   |
+|--------------|---------------|----------------------------|
+| *Models*   | models/     | Usuario.py, Tarefa.py |
+| *Views*    | views/      | Templates .tpl          |
+| *Controllers* | controllers/ | Rotas e lógica do sistema |
+
+---
+
+## ✅ Critérios Atendidos
+
+- ✅ Aplicação Web + MVC 
+- ✅ Persistência em JSON 
+- ✅ 4 Pilares da OO: abstração, encapsulamento, herança e polimorfismo 
+- ✅ Autenticação de Usuários 
+
+---
+
+##  Execução do Projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/Thaynasoars/Gerenciador-de-Tarefas-.git                                                                                     
+# Crie e ative o ambiente virtual
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Execute o sistema
+python main.py
+Acesse no navegador: 👉 http://localhost:8080/login
