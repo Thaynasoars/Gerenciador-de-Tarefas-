@@ -59,6 +59,19 @@
         .botao:hover {
             background-color: #0056b3;
         }
+        
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
 
         .link-voltar {
             display: block;
