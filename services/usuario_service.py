@@ -30,10 +30,15 @@ def find_by_email(email):
             return u
     return None
 
-# Para facilitar o import, crie a instância:
+def remover_usuario(usuario_id):
+    usuarios = carregar_usuarios()
+    usuarios = [u for u in usuarios if u.id != usuario_id]
+    salvar_usuarios(usuarios)
+
 class UsuarioService:
     get_all = staticmethod(get_all)
     adicionar_usuario = staticmethod(adicionar_usuario)
     find_by_email = staticmethod(find_by_email)
+    remover_usuario = staticmethod(remover_usuario)
 
 usuario_service = UsuarioService()

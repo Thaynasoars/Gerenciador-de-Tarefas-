@@ -55,3 +55,8 @@ def redirect_register():
 def logout():
     response.delete_cookie("usuario")
     return redirect('/')
+
+@route('/usuarios/<id:int>/excluir', method='POST')
+def excluir_usuario(id):
+    usuario_service.remover_usuario(id)
+    return redirect('/usuarios')

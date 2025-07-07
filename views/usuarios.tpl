@@ -6,7 +6,12 @@
   <ul class="lista-tarefas">
     % if usuarios:
       % for usuario in usuarios:
-        <li><strong>{{usuario.nome}}</strong> ({{usuario.email}})</li>
+        <li>
+          <strong>{{usuario.nome}}</strong> ({{usuario.email}})
+          <form action="/usuarios/{{usuario.id}}/excluir" method="post" style="display:inline;">
+            <button type="submit" onclick="return confirm('Deseja excluir este usuário?')">Excluir</button>
+          </form>
+        </li>
       % end
     % else:
       <li>Nenhum usuário cadastrado.</li>
